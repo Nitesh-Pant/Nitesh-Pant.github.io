@@ -1,0 +1,299 @@
+<!DOCTYPEhtml>
+<html>
+	<head>
+		<title>Photographers Hub</title>
+		<link rel="icon" type="image/ico" href="..\website\logo\images.png" />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+a:link, a:visited{
+    background-color: grey;
+display: inline-block;
+width: 120px;
+color: white;
+font-weight: bold;
+background-color: black;
+text-align: center;
+padding: 6px;
+margin: auto;
+text-decoration: none;
+text-transform: uppercase
+background: red;
+-webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+transition: width 1s;
+}
+
+
+a:hover, a:active{
+color: #ff5c5c;
+width: 140px;
+}
+d{
+	 border:solids;
+	 width: 300px;
+	 height:5px;
+	 position: absolute;
+	 animation-name: nitesh;
+	 animation-duration: 30s;
+	 animation-iteration-count: infinite;
+	 animation-direction:normal;
+}
+@keyframes nitesh{
+0%{right:0%; top:0%; opacity:.5}
+25%{right:0%; top:150%;opacity:.9}
+50%{right:0%; top:0%;opacity:0.1}
+75%{right:0%; top:150%;opacity:0.7}
+100%{right:0%; top:0%;opacity:0.2}
+}
+</style>
+	</head>
+	
+	<body>
+
+		<div>
+			<div class="head">
+				<h1>Photographers Hub</h1>
+			</div>
+					<p>
+						<ul id="menu" style="padding-top:150px;">
+							<li id="items"><a href="home.html">Home</a></li>
+							<li id="items"><a href="Production.html">Production</a></li>
+							<li id="items"><a href="Genres.html">Genres</a></li>
+							<li id="items"><a href="Videos.html">Videos</a></li>
+							<li id="items"><a href="Contact.html">Contact</a></li>
+    					    <li id="items"><a href="login.html">Login</a></li>
+    					</ul>
+					</p>
+		</div>
+
+
+		<style>
+		
+			.head{padding-bottom: 10px;
+			text-align:center; 
+		  	position:fixed; 
+	  		width: 100%;
+	  		opacity: .8;
+	  		background-color:black;
+	  		}
+			
+			* {box-sizing: border-box}
+
+			body .mySlides {display: none}
+			img {vertical-align: middle;}
+
+			/* Slideshow container */
+			.slideshow-container {
+			 max-width: 1000px;
+			 position: relative;
+  			 margin: auto;
+			 }
+
+			/* Next & previous buttons */
+			.prev, .next {
+		 	cursor: pointer;
+  			position: absolute;
+  			top: 50%;
+  			width: auto;
+  			padding: 16px;
+  			margin-top: -22px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 18px;
+  			transition: 0.6s ease;
+  			border-radius: 0 3px 3px 0;
+			}
+
+			/* Position the "next button" to the right */
+			.next {
+  			right: 0;
+  			border-radius: 3px 0 0 3px;
+			}
+
+			/* On hover, add a black background color with a little bit see-through */
+			.prev:hover, .next:hover {
+  			background-color: rgba(0,0,0,0.8);
+			}
+
+
+			/* The dots/bullets/indicators */
+			.dot {
+  			cursor: pointer;
+  			height: 15px;
+  			width: 15px;
+  			margin: 0 2px;
+  			background-color: #bbb;
+  			border-radius: 50%;
+  			display: inline-block;
+  			transition: background-color 0.6s ease;
+			}
+
+			.active, .dot:hover {
+  			background-color: #717171;
+			}
+
+			/* Fading animation */
+			.fade {
+  			-webkit-animation-name: fade;
+  			-webkit-animation-duration: 1.5s;
+  			animation-name: fade;
+  			animation-duration: 1.5s;
+			}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.trans {
+    width: 70px;
+    height: 50px;
+    overflow:hidden;
+    background: lightgray;
+    border-radius: 40px;
+    float: left;
+    text-align: center;
+    display: inline;
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+}
+
+.trans:hover {
+    width: 400px;
+    display: inline;
+    border-radius: 40px;
+}
+</style>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="..\website\images\photography-hd-wallpaper.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="..\website\images\pier_at_sunset-wallpaper-1920x1080.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="web-background.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div id ="main">
+
+<h2> Contact Us</h2>
+
+
+<table>
+	<tr>
+		<td>
+			<span><strong>Address</strong></span>
+			<br>SC Bose
+			<br>Charkhamba,clement town
+			<br>ISBT,Dehradun
+		</td>
+
+			<td>
+				<span><strong>Contact hours</strong></span>
+				<br>Mon: 8:00am-9:00pm
+				<br>Tue: 8:00am-9:00pm
+				<br>Wed: 8:00am-9:00pm
+				<br>Thu: 8:00am-9:00pm
+				<br>Fri: 8:00am-9:00pm
+				<br>Sat: 8:00am-9:00pm
+				<br>Sun: OFF
+			</td>
+			
+	</tr>
+</table>
+<d><img src="..\website\images\Phone-icon.png" style="height:100px; width:100px;"></d>
+				
+			<span><strong>Contacts</strong></span><br>
+			<div class="trans">
+			<input type="image" src="..\website\logo\imgingest-1070996877219765234.png" style="width:70px; height:55px; float:left; padding-left:0px;"><h5>730519516</h5></div>
+
+
+			<div style="padding-left:50%;">
+				<div class="trans">
+					<input type="image" onclick="location.href='http://www.instagram.com/i.nitesh_';" src="..\website\logo\instagram.png" style="width:70px; height:55px; float:left; padding-left:0px;"><h5>i.nitesh_</h5></div>
+			</div><br><br><br>
+
+			<div class="trans">
+				<input type="image" onclick="location.href='http://www.facebook.com/iamNiteshPant';" src="..\website\logo\facebook.png" style="width:70px; height:55px; float:left; padding-left:0px;"><h5>Nitesh Pant</h5></b></div>
+			
+			<div style="padding-left:50%;">
+				<div class="trans">
+			<input type="image" onclick="location.href='http://www.twitter.com/i.nitesh_';" src="..\website\logo\twitter.png" style="height:55px; width:70px; padding-left:0px; float:left;"><h5 style="padding-bottom:10px:">i.nitesh_</h5></div>
+		</div><br><br><br>
+			
+				<div class="trans">
+			<input type="image" onclick="location.href='http://www.pintrest.com/iNitesh';" src="..\website\logo\pinterest.png" style="height:55px; width:70px; padding-left:0px;float:left;"><h5>iNitesh</h5></div>
+
+			<div style="padding-left:50%;">
+				<div class="trans">	
+			<input type="image" onclick="location.href='pantnitesh17@gmail.com';" src="..\website\logo\email-logo-hi.png" style="height:55px; width:70px; padding-left:0px;float:left;"><h5>pantnitesh17@gmail.com</h5>
+			</div>
+		</div><br><br><br>
+				
+		<div class="trans">			
+			<input type="image" onclick="location.href='https://github.com/Nitesh-Pant';" src="..\website\logo\download.png" style="height:55px; width:70px; padding-left:0px;float:left;"><h5>Nitesh-Pant</h5>
+		</div><br><br><br>
+		
+</div>
+</body>
+<div>
+<p id="footer">Copyright &copy: 2018 Photography</p>
+</div>
+</html>

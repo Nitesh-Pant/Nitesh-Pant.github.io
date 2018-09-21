@@ -1,0 +1,23 @@
+<input type='file' />
+<img id="myImg" src="#" alt="your image" />
+
+<!-- Post Info -->
+<div style='position:fixed;bottom:0;left:0;    
+            background:lightgray;width:100%;'>
+    About this SO QuestionA button for Open Dialog Box using HTML and JQuery</a><br/>
+<div>
+	<script type="text/javascript">
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
+</script>

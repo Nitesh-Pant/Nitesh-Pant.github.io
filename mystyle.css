@@ -1,0 +1,52 @@
+.container{
+	position: fixed;
+	float: left;
+	width:320px;
+	height: 540px;
+	background: black;
+	opacity: .7;
+	color: #fff;
+	margin-top: 7%;
+	margin-left: 40%;
+	padding: auto;
+ 	position: center;
+ 	text-align: center;
+ 	box-sizing: border-box;
+}
+
+.avatar{
+	width: 100px;
+	margin-top: -18%;
+	height: 100px;
+	border-radius: 50%;
+	position: center;
+	top: -40px;
+	left: calc(50% -50px);
+
+}
+
+h1{
+ color:whiteblacj;
+}
+input{
+ width:250px;
+ height:30px;
+}
+
+input[type="submit"]{
+   background: #3399ff;
+  border: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.4s linear;
+}
+a{
+	color: red;
+	text-decoration: none;
+}
+.container {
+    page-break-after: always;
+}
